@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "VerifyAccount";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+
+}
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="~/finalContent/Loginstyle.css" rel="stylesheet" />
+<link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
+
+
+<h2 style="color:white">Verify Account</h2>
+<div class="w3layoutscontaineragileits">
+
+    <hr>
+
+    @if (ViewBag.Status != null && Convert.ToBoolean(ViewBag.Status))
+    {
+        <div class="alert alert-success">
+            <strong>Success!</strong> Your account has been activated successfully. Click here to @Html.ActionLink("Login", "Login", "User")
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger">
+            <strong>Error !</strong> @ViewBag.Message
+        </div>
+    }
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>

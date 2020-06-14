@@ -1,0 +1,587 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/*--
+    Author: W3layouts
+    Author URL: http://w3layouts.com
+    License: Creative Commons Attribution 3.0 Unported
+    License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+
+
+
+/*-- Reset Code --*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after, q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+input[type="text"], input[type="password"], input[type="date"] {
+    width: 50%;
+    padding: 15px 10px 15px 50px;
+    font-size: 14px;
+    background: transparent;
+    border: 2px solid #FFF;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 20px;
+    color: #FFF;
+}
+
+input[type="date"] {
+    background-size: 25px;
+}
+
+input[type="text"] {
+    background-size: 25px;
+}
+.txt-rt {
+    text-align: right;
+}
+
+.txt-lt {
+    text-align: left;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.float-rt {
+    float: right;
+}
+
+.float-lt {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.pos-relative {
+    position: relative;
+}
+
+.pos-absolute {
+    position: absolute;
+}
+
+.vertical-base {
+    vertical-align: baseline;
+}
+
+.vertical-top {
+    vertical-align: top;
+}
+
+.underline {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    margin: 0 0 20px 0;
+}
+
+nav.vertical ul li {
+    display: block;
+}
+
+nav.horizontal ul li {
+    display: inline-block;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*-- Reset Code --*/
+
+
+
+/*-- Index-Page-Styling --*/
+
+body {
+    background: url('../finalimage/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+    body a {
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+        -moz-transition: 0.5s all;
+        -o-transition: 0.5s all;
+        text-decoration: none;
+    }
+
+input[type="button"], input[type="submit"] {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #FFF;
+    letter-spacing: 2px;
+    margin: 100px auto;
+}
+
+.w3layoutscontaineragileits {
+    width: 25%;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+ul.agileinfotickwthree {
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+    ul.agileinfotickwthree li input[type="checkbox"] {
+        display: none;
+    }
+
+        ul.agileinfotickwthree li input[type="checkbox"] + label {
+            position: relative;
+            padding-left: 30px;
+            border: #F0F8FF;
+            display: inline-block;
+            font-size: 16px;
+            color: #EEE;
+        }
+
+            ul.agileinfotickwthree li input[type="checkbox"] + label span:first-child {
+                width: 17px;
+                height: 17px;
+                display: inline-block;
+                border: 2px solid #EEE;
+                position: absolute;
+                top: -1px;
+                left: 0;
+                bottom: 4px;
+            }
+
+        ul.agileinfotickwthree li input[type="checkbox"]:checked + label span:first-child:before {
+            content: "";
+            background: url('../finalimage/tick.png')no-repeat;
+            position: absolute;
+            left: 3px;
+            top: 3px;
+            font-size: 10px;
+            width: 10px;
+            height: 10px;
+        }
+
+
+.aitssendbuttonw3ls p {
+    text-align: right;
+    padding-top: 15px;
+}
+
+    .aitssendbuttonw3ls p a {
+        color: #FFF;
+    }
+
+        .aitssendbuttonw3ls p a span {
+            font-size: 18px;
+        }
+
+        .aitssendbuttonw3ls p a:hover {
+            color: #FFEB3B;
+        }
+
+::-webkit-input-placeholder {
+    color: #FFF;
+}
+
+::-moz-placeholder {
+    color: #FFF;
+}
+
+::-moz-placeholder {
+    color: #FFF;
+}
+
+
+.w3footeragile {
+    margin: 150px 10px 20px;
+}
+
+    .w3footeragile p a {
+        color: #FFF;
+    }
+
+    .w3footeragile p {
+        line-height: 25px;
+    }
+
+        .w3footeragile p a:hover {
+            color: #FFEB3B;
+        }
+
+/*-- Index-Page-Styling --*/
+
+
+
+
+
+/*--- Responsive Code ---*/
+
+
+
+
+
+@media screen and (max-width: 1440px) {
+    .w3layoutscontaineragileits {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    h1 {
+        margin: 75px auto;
+    }
+
+    .w3footeragile {
+        margin: 100px 10px 20px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .w3layoutscontaineragileits {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 45px;
+        margin: 50px auto;
+    }
+
+    .w3layoutscontaineragileits {
+        width: 40%;
+    }
+
+    .w3footeragile {
+        margin: 50px 10px 20px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .w3layoutscontaineragileits {
+        width: 42%;
+    }
+}
+
+@media screen and (max-width: 853px) {
+    .w3layoutscontaineragileits {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .w3layoutscontaineragileits {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .w3layoutscontaineragileits {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    h1 {
+        font-size: 40px;
+        margin: 40px auto;
+    }
+
+    .w3layoutscontaineragileits {
+        width: 51%;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    .aitssendbuttonw3ls p {
+        padding-top: 13px;
+        float: right;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 667px) {
+    .w3layoutscontaineragileits {
+        width: 52%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    h1 {
+        margin: 35px auto;
+    }
+
+    .w3layoutscontaineragileits {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 603px) {
+    .w3layoutscontaineragileits {
+        width: 56%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .w3layoutscontaineragileits {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    h1 {
+        font-size: 35px;
+        margin: 25px auto;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+
+    ul.tick {
+        margin-bottom: 20px;
+    }
+
+        ul.tick li input[type="checkbox"] + label {
+            font-size: 15px;
+        }
+
+            ul.tick li input[type="checkbox"] + label span:first-child {
+                width: 15px;
+                height: 15px;
+                top: 0;
+                border: 1px solid #EEE;
+            }
+
+
+    .w3footeragile p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .w3layoutscontaineragileits {
+        width: 65%;
+    }
+
+    .aitssendbuttonw3ls {
+        text-align: center;
+    }
+
+    ul.agileinfotickwthree {
+        padding-left: 0;
+    }
+
+    input[type="submit"] {
+        float: inherit;
+        width: 100%;
+    }
+
+    .aitssendbuttonw3ls p {
+        float: left;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .w3layoutscontaineragileits {
+        width: 70%;
+    }
+
+    input[type="text"], input[type="password"] {
+        width: 78%;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    h1 {
+        letter-spacing: 0;
+    }
+
+    .w3layoutscontaineragileits {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 32px;
+        font-weight: 500;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    .w3layoutscontaineragileits {
+        width: 85%;
+    }
+}
+
+
+
+
+
+/*--- Responsive Code ---*/
+body {
+    background-image: url(/images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    background-color: rgba(26, 46, 51,0.9 );
+    width: 500px;
+    height: auto;
+    position: relative;
+    top: 50px;
+    left: 30%;
+    padding-bottom: 10px;
+    box-shadow: rgba(0,0,0,0.4) 10px 10px;
+}
+
+.icon {
+    text-align: center;
+    padding-top: 40px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.contant {
+    width: 425px;
+    height: 250px;
+    color: white;
+    margin: 25px;
+    padding: 12.5px;
+}
+
+h2 {
+    padding: 12px;
+    color: aqua;
+    font-size: 20px;
+}
+
+
+
+.gradient-button {
+    margin: 10px;
+    font-weight: bold;
+    font-size: 50px;
+    padding: 15px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #FFF;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 25px;
+}
+
+    .gradient-button:hover {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        margin: 8px 10px 12px;
+    }
+
+.gradient-button-1 {
+    background-image: linear-gradient(to right, rgb(255, 0, 0) 0%, rgb(238, 59, 14) 51%, rgb(255, 30, 0) 100%)
+}
+
+    .gradient-button-1:hover {
+        background-position: right center;
+    }
+
+.gradient-button-2 {
+    background-image: linear-gradient(to right, rgb(0, 81, 255) 0%, rgb(0, 89, 255) 51%, rgb(0, 225, 255) 100%)
+}
+
+    .gradient-button-2:hover {
+        background-position: right center;
+    }

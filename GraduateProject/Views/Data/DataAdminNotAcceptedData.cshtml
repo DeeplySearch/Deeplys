@@ -1,0 +1,91 @@
+﻿@model IEnumerable<GraduateProject.Models.DataInfo>
+
+@{
+    ViewBag.Title = "DataCc";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<br />
+<br />
+
+<div class="row">
+    <div class="col-6">
+        <h2 class="text-info">Data Admin</h2>
+    </div>
+    <div class="col-6 text-right">
+        <a class="btn btn-info" href="@Url.Action("IndexAdmin","Data")"><i class="fas fa-plus"></i> &nbsp;Add New Data </a>
+
+    </div>
+    <br />
+
+    <div class="col-12">
+        <table class="table table-striped broder">
+            <tr class="table-info">
+                <th>
+                    @Html.DisplayNameFor(m => m.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.URL)
+                </th>
+
+                <th>
+
+                    @Html.DisplayNameFor(m => m.UserEmail)
+
+                </th>
+
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+
+
+                        @Html.DisplayName(item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayName(item.description)
+                    </td>
+                    <td>
+                        @Html.DisplayName(item.URL)
+                    </td>
+                    <td>
+                        @Html.DisplayName(item.UserEmail)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                    </td>
+                    <td>
+                        @Html.ActionLink("Accept", "Accept", new { id = item.Id })
+                    </td>
+                    @*<td> @Html.ActionLink("Delete","Delete","Data",new { DataId = item.Id},new { }) </td>*@
+                    @*<td class="text-right">
+                                    <div class="btn-group" rold="group">
+                                        <form method="post" action="Index">
+                                            <button type="submit" class="btn btn-primary" action="Index" route-id="@item.Id"><i class="far fa-edit"></i></button>
+                                        </form>
+                                        <form method="post" action="Delete">
+
+                                            <button onclick="if (!confirm('Areb you sure you want to delete this Make')){ return false }
+                        " type="submit" class="btn btn-danger rounded-0" action="Delete" route-id="@item.Id">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+
+                                        </form>
+
+                                    </div>
+                                </td>*@
+
+                </tr>
+            }
+        </table>
+    </div>
+</div>

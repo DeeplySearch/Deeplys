@@ -1,0 +1,161 @@
+﻿@model GraduateProject.Models.User
+@{
+    ViewBag.Title = "Sign";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+@*<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900"
+          rel="stylesheet">
+    <link href="~/styles/Style-Sign-up.css" rel="stylesheet" />
+    @if (ViewBag.Status != null && Convert.ToBoolean(ViewBag.Status))
+    {
+        if (ViewBag.Message != null)
+        {
+            <div class="alert alert-success">
+                <strong>Success!</strong>@ViewBag.Message
+            </div>
+        }
+    }
+    else
+    {
+        using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="login-wrap" style="position: relative; top: 72px;">
+                <div class="login-html">
+                    <label class="tab" style="position: relative; left: 150px; top:-50px">Sign Up</label>
+                    <div class="login-form" style="position: relative; top:-50px">
+                        <div class="sign-up-htm">
+                            <div class="group">
+                                @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "label", @Style = "display: inline" })
+                                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "input" } })
+                                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+
+                            </div>
+                            <div class="group">
+                                @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "label", @Style = "display: inline" })
+                                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "input" } })
+                                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="group">
+                                @Html.LabelFor(model => model.EmailID, htmlAttributes: new { @class = "label", @Style = "display: inline" })
+                                @Html.EditorFor(model => model.EmailID, new { htmlAttributes = new { @class = "input" } })
+                                @Html.ValidationMessageFor(model => model.EmailID, "", new { @class = "text-danger" })
+                                @Html.ValidationMessage("EmailExist", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="group">
+                                @Html.LabelFor(model => model.DateOfBirth, htmlAttributes: new { @class = "label", @Style = "display: inline" })
+                                @Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { @class = "input" } })
+                                @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="group">
+                                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "label", @Style = "display: inline" })
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "input" } })
+                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="group">
+                                @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "label", @Style = "display: inline" })
+                                @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "input" } })
+                                @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="group">
+                                <input type="submit" class="button" value="Sign Up">
+                            </div>
+                            <div class="hr" style="position: relative; top:-50px"></div>
+                            <div class="foot-lnk" style="position: relative; top:-80px">
+                                <a href="@Url.Action("Login", "User")">Already Member? logIn Here</a>
+                            </div>
+                        </div>
+                         ///////
+
+                    </div>
+                </div>
+            </div>
+
+        }
+
+
+    }*@
+
+@*@section Scripts{
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    }*@
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="~/finalContent/Loginstyle.css" rel="stylesheet" />
+<link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
+
+<h2 style="color:white">Make a new Account</h2>
+<div class="w3layoutscontaineragileits">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <hr />
+        if (ViewBag.Status != null && Convert.ToBoolean(ViewBag.Status))
+        {
+            if (ViewBag.Message != null)
+            {
+                <div class="alert alert-success">
+                    <strong>Success!</strong>@ViewBag.Message
+                </div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            }
+        }
+        else
+        {
+            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "input", @type = "text", @placeholder = "FIRST NAME", required = "" } })
+            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+
+            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "input", @type = "text", @placeholder = "LAST NAME", required = "" } })
+            @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+
+            @Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { @class = "input", required = "" } })
+            @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "text-danger" })
+
+            @Html.EditorFor(model => model.EmailID, new { htmlAttributes = new { @class = "input", @type = "text", @Style = "background : url('../finalimage/mail.png') no-repeat 13px 11px; ", @placeholder = "EMAIL", required = "" } })
+            @Html.ValidationMessageFor(model => model.EmailID, "", new { @class = "text-danger" })
+
+
+            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "input", @placeholder = "PASSWORD", required = "" } })
+            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+
+            @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "input", @placeholder = "Confirm PASSWORD", required = "" } })
+            @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+
+
+            <div class="aitssendbuttonw3ls">
+                <input type="submit" value="Sign Up">
+                <p><a href="@Url.Action("Login", "User")">Already Member? logIn Here <span>→</span></a></p>
+                <div class="clear"></div>
+            </div>
+
+        }
+    }
+
+</div>
+   

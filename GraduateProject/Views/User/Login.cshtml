@@ -1,0 +1,58 @@
+﻿@model GraduateProject.Models.UserLogin
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="~/finalContent/Loginstyle.css" rel="stylesheet" />
+<link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2 style="color:white">Log in to your Account</h2>
+<div class="w3layoutscontaineragileits">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        if (ViewBag.Message != "")
+        {
+            <div>@ViewBag.Message </div>
+        }
+        @Html.EditorFor(model => model.EmailID, new { htmlAttributes = new { @class = "input", @placeholder = "EMAIL", required = "" } })
+        @Html.ValidationMessageFor(model => model.EmailID, "", new { @class = "text-danger" })
+
+        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "input", @placeholder = "PASSWORD", required = "" } })
+        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+        @*<input type="text" Name="Userame" placeholder="EMAIL" required="">*@
+        @*<input type="password" Name="Password" placeholder="PASSWORD" required="">*@
+        <ul class="agileinfotickwthree">
+            <li>
+                <input type="checkbox" id="brand1" value="">
+                <label for="brand1"><span></span>Remember me</label>
+            </li>
+        </ul>
+        <div class="aitssendbuttonw3ls">
+            <input type="submit" value="LOGIN">
+            <p><a href="@Url.Action("Sign", "User")">REGISTER NEW ACCOUNT <span>→</span></a></p>
+            <p><a href="@Url.Action("ForPassword", "User")">FORGOT YOUR PASSWORD <span>→</span></a></p>
+            <div class="clear"></div>
+        </div>
+
+
+
+    }
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

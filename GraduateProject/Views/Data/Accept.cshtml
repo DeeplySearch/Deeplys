@@ -1,0 +1,124 @@
+﻿@model GraduateProject.Models.DataInfo
+
+@{
+    ViewBag.Title = "Accept";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<link href="~/finalContent/AddDataStyle.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
+<div class="first" id="one">
+    <div id="tow">
+        <div class="head-text">
+            <h1>Accept Data </h1>
+        </div>
+        <div class="content">
+            <div>
+                <label for="Category">Category:</label>
+                @switch (Model.CategoryId)
+                {
+                    case 1:
+                        <a>Api</a>
+                        break;
+                    case 2:
+                        <a>CV</a>
+                        break;
+                    case 3:
+                        <a>Online Work</a>
+                        break;
+                }
+            </div>
+            <div>
+
+                <label for="Name ">Name : </label>
+                <a> @Html.DisplayFor(model => model.Name)</a>
+            </div>
+            <div>
+
+                <label for="link ">URL : </label>
+                <a> @Html.DisplayFor(model => model.URL)</a>
+            </div>
+
+            <label for="Discription">Discription : </label>
+            <a> @Html.DisplayFor(model => model.description)</a>
+
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div style="position: relative">
+                    <input type="submit" value="Accept Data" class="gradient-button gradient-button-2" style="font-size:20px">
+                </div>
+                <div style="position: relative; font-size:20px ; text-emphasis-color:aqua" class="gradient-button">
+                    @Html.ActionLink("Back to All Data", "Data", new { @style = "" })
+
+                </div>
+
+            }
+
+        </div>
+
+    </div>
+</div>
+<br />
+<br />
+<br/>
+@*<h2>Accept</h2>
+
+    <div>
+        <h4>DataInfo</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.description)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.URL)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.URL)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CategoryId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CategoryId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UserId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UserId)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Accept" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Data")
+            </div>
+        }
+    </p>*@

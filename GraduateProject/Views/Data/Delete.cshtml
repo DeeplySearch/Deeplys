@@ -1,0 +1,81 @@
+﻿@model GraduateProject.Models.DataInfo
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<link href="~/finalContent/AddDataStyle.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
+<div class="first" id="one" >
+    <div id="tow">
+        <div class="head-text" style="margin-top:-100px">
+            <h1>Delete Data </h1>
+        </div>
+        <div class="content" style="margin-top:-50px">
+            <div>
+                <label for="Category">Category:</label>
+                @switch (Model.CategoryId)
+                {
+                    case 1:
+                        <a>Api</a>
+                        break;
+                    case 2:
+                        <a>CV</a>
+                        break;
+                    case 3:
+                        <a>Online Work</a>
+                        break;
+                }
+            </div>
+            <div>
+
+                <label for="Name ">Name : </label>
+                <a> @Html.DisplayFor(model => model.Name)</a>
+            </div>
+            <div>
+
+                <label for="link ">URL : </label>
+                <a> @Html.DisplayFor(model => model.URL)</a>
+            </div>
+
+            <label for="Discription">Discription : </label>
+            <a> @Html.DisplayFor(model => model.description)</a>
+
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div style="position: relative">
+                    <input type="submit" value="Delete Data" class="gradient-button gradient-button-2" style="font-size:20px">
+                </div>
+                <div style="position: relative; font-size:20px ; text-emphasis-color:aqua" class="gradient-button">
+                    @if (User.Identity.Name != "ghazihaddad3@gmail.com")
+                    {
+                        @Html.ActionLink("Back to All Data", "Data", new { @style = "" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Back to All Data", "DataAdmin", new { @style = "" })
+                    }
+
+
+                </div>
+            }
+
+        </div>
+
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</div>
+

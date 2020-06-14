@@ -1,0 +1,73 @@
+
+/*--header start here--*/
+body {
+	background: url('../finalimage/background.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	color: #FFF;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
+
+.info-top {
+	background: url('../finalimage/d-top.jpg');
+	padding: 1em 1em;
+}
+.info-top h3 {
+	font-size: 1.1em;
+	font-weight: 700;
+	color: #000;
+	margin: 0px;
+	text-align:center;
+}
+.info-bott {
+	background: url('../finalimage/d-middle.jpg')0px 0px;
+	padding: 1em 1em;
+	min-height: 0px;
+	text-align: center;
+}
+.info-bott p {
+	font-size: 0.885em;
+	font-weight: 500;
+	color: #999;
+	padding: 1.5em 0px;
+	line-height: 1.5em;
+	text-align: left;
+}
+.info-bott h5 {
+	font-size: 0.9em;
+	font-weight: 500;
+	color: #008FD5;
+	text-align: left;
+	font-style: italic;
+	text-decoration: underline;
+}
+.infogrid-bwn {
+	background: #1F262C;
+	padding: 0.6em 1em;
+	min-height: 50px;
+	text-align: center;
+}
+span.gd-clr {
+	font-size: 1em;
+	font-weight: 700;
+	color: #008FD5;
+}
+
+
+
+.gd-tl-tip:after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: -20px;
+	border-left: 175px solid rgba(0, 0, 0, 0);
+	border-top: 30px solid #1F262C;
+	border-right: 175px solid rgba(0, 0, 0, 0);
+	top: 433px;
+	left: 15px;
+}	
+

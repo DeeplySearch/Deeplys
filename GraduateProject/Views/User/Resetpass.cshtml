@@ -1,0 +1,146 @@
+﻿@model GraduateProject.Models.ResetPasswordModel
+@{
+    ViewBag.Title = "Resetpass";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="~/finalContent/Loginstyle.css" rel="stylesheet" />
+<link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
+
+<h2 style="color:white">Create A New Password</h2>
+<div class="w3layoutscontaineragileits">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        if (ViewBag.Message != null)
+        {
+            <div class="text-success" style="margin-left:-400px">
+                <div class="alert alert-success" style="width:200px;margin-left:500px">
+                    @ViewBag.Message
+
+                </div>
+            </div>
+        }
+
+
+
+        <div class="login-wrap" style="position: relative; top: 72px;">
+            <div class="login-html">
+                <div class="login-form">
+                    <div class="sign-in-htm">
+                        <div class="group">
+                            @Html.LabelFor(model => model.NewPassword, htmlAttributes: new { @class = "label", @Style = "display: inline" })
+                            @Html.EditorFor(model => model.NewPassword, new { htmlAttributes = new { @class = "input" } })
+                            @Html.ValidationMessageFor(model => model.NewPassword, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="group">
+                            @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "label", @Style = "display: inline" })
+                            @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "input" } })
+                            @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                        </div>
+
+
+                        <div class="form-group">
+                            @Html.HiddenFor(a => a.ResetCode)
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Rest Password" class="btn btn-lg btn-primary btn-block" style="background-color: #3EC1D5; position:relative ;left:-20px;" />
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+@*<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900"
+          rel="stylesheet">
+
+    <link href="~/styles/Style-Sign-up.css" rel="stylesheet" />
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+            <div class="text-danger">@ViewBag.Message </div>
+
+
+
+        <div class="login-wrap" style="position: relative; top: 72px;">
+            <div class="login-html">
+                <label class="tab" style="position: center;">Create A New Password</label>
+                <br>
+                <hr>
+                <div class="login-form">
+                    <div class="sign-in-htm">
+                        <div class="group">
+                            @Html.LabelFor(model => model.NewPassword, htmlAttributes: new { @class = "label", @Style = "display: inline" })
+                            @Html.EditorFor(model => model.NewPassword, new { htmlAttributes = new { @class = "input" } })
+                            @Html.ValidationMessageFor(model => model.NewPassword, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="group">
+                            @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "label", @Style = "display: inline" })
+                            @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "input" } })
+                            @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                        </div>
+
+
+                        <div class="form-group">
+                            @Html.HiddenFor(a => a.ResetCode)
+                        </div>
+
+                        <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Rest Password" class="btn btn-lg btn-primary btn-block" style="background-color: #3EC1D5; position:relative ;left:-20px;"/>
+                        </div>
+                    </div>
+
+                    </div>
+                     ///////
+
+                </div>
+            </div>
+        </div>
+    }
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@

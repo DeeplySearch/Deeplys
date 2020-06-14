@@ -1,0 +1,87 @@
+﻿@model GraduateProject.Models.DataInfo
+@{
+    ViewBag.Title = "EditAdmin";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<link href="~/finalContent/AddDataStyle.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
+<div class="first" id="one">
+    <div id="tow">
+        <div class="head-text">
+            <h1>Edit Data </h1>
+        </div>
+        <div class="content">
+            <form method="post" action="Edit">
+                <div>
+                    <label for="Category">Category:</label>
+                    @Html.DropDownListFor(model => model.CategoryId, new SelectList(ViewBag.list, "id", "Text"), "choose Catygory", new { style = "height: 68px;width: 200px; background:lightblue; color: blue;font-size: 18px;" })
+                    @Html.ValidationMessageFor(model => model.CategoryId, "", new { @class = "text-danger" })
+                </div>
+                <div>
+                    <label for="Name ">Name : </label>
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "input", } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+                <div>
+                    <label for="link ">URL : </label>
+                    @Html.EditorFor(model => model.URL, new { htmlAttributes = new { @class = "input", } })
+                    @Html.ValidationMessageFor(model => model.URL, "", new { @class = "text-danger" })
+                </div>
+                <div style="margin-left:-30px">
+                    <label for="Discription">Discription : </label>
+                    @Html.EditorFor(model => model.description, new { htmlAttributes = new { @class = "input", } })
+                    @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
+                </div>
+                <div style="position: relative;">
+                    <input type="submit" value="Edit Data" class="gradient-button gradient-button-2">
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+@*<br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <form method="post" action="EditAdmin">
+
+        <div>
+            @Html.DropDownListFor(model => model.CategoryId, new SelectList(ViewBag.list, "id", "Text"), "choose Catygory", new { style = "height: 68px;width: 200px; background: rgba(0, 0, 0, 0.1); color: #fff;font-size: 18px;" })
+            @Html.ValidationMessageFor(model => model.CategoryId, "", new { @class = "text-danger" })
+
+            @Html.LabelFor(model => model.CategoryId, htmlAttributes: new { @class = "label", @Style = "display: inline" })
+                @Html.EditorFor(model => model.CategoryId, new { htmlAttributes = new { @class = "input" } })
+                @Html.ValidationMessageFor(model => model.CategoryId, "", new { @class = "text-danger" })
+            <div class="group">
+
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "label", @Style = "display: inline" })
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "input" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+
+            </div>
+            <div class="group">
+
+                @Html.LabelFor(model => model.description, htmlAttributes: new { @class = "label", @Style = "display: inline" })
+                @Html.EditorFor(model => model.description, new { htmlAttributes = new { @class = "input" } })
+                @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
+
+            </div>
+            <div class="group">
+
+                @Html.LabelFor(model => model.URL, htmlAttributes: new { @class = "label", @Style = "display: inline" })
+                @Html.EditorFor(model => model.URL, new { htmlAttributes = new { @class = "input" } })
+                @Html.ValidationMessageFor(model => model.URL, "", new { @class = "text-danger" })
+
+            </div>
+        </div>
+        <div class="group">
+            <input type="submit" class="button" value="Update">
+        </div>
+    </form>*@

@@ -1,0 +1,76 @@
+﻿@model GraduateProject.Models.DataInfo
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<link href="~/finalContent/AddDataStyle.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
+<div class="first" id="one">
+    <div id="tow">
+        <div class="head-text" style="margin-top:-100px">
+            <h1>Add Data </h1>
+        </div>
+        <div class="content" style="margin-top:-50px">
+            <form method="post" action="Data/Index">
+                @if (ViewBag.message != null)
+                {
+                <div class="alert alert-success" style="width:200px;margin-left:550px">
+                    <strong>@ViewBag.message</strong>
+                     @Html.ActionLink("Add Another Data", "Index")
+                </div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+
+                }
+                else
+                {
+                    <div>
+                        <label for="Category">Category:</label>
+                        @Html.DropDownListFor(model => model.CategoryId, new SelectList(ViewBag.list, "id", "Text"), "choose Catygory", new { style = "height: 68px;width: 200px; background:lightblue; color: blue;font-size: 18px;" })
+                        @Html.ValidationMessageFor(model => model.CategoryId, "", new { @class = "text-danger" })
+                    </div>
+                    <div>
+                        <label for="Name ">Name : </label>
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "input", } })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div>
+                    <div>
+                        <label for="link ">URL : </label>
+                        @Html.EditorFor(model => model.URL, new { htmlAttributes = new { @class = "input", } })
+                        @Html.ValidationMessageFor(model => model.URL, "", new { @class = "text-danger" })
+                    </div>
+                    <div style="margin-left:-30px">
+                        <label for="Discription">Discription : </label>
+                        @Html.EditorFor(model => model.description, new { htmlAttributes = new { @class = "input", } })
+                        @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
+                    </div>
+                    <div style="position: relative;">
+                        <input type="submit" value="Add Data" class="gradient-button gradient-button-2">
+                    </div>
+                    <div style="position: relative; font-size:20px ; text-emphasis-color:aqua" class="gradient-button">
+                        @Html.ActionLink("Back to All Data", "Data", new { @style = "" })
+
+                    </div>
+                }
+
+            </form>
+</div>
+
+    </div>
+</div>

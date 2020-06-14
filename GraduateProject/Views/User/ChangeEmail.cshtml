@@ -1,0 +1,39 @@
+﻿@model GraduateProject.Models.User
+@{
+    ViewBag.Title = "ChangeEmail";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="~/finalContent/Loginstyle.css" rel="stylesheet" />
+<link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
+
+<h2 style="color:white">Change Email Address</h2>
+<div class="w3layoutscontaineragileits">
+    @using (Html.BeginForm("ChangeEmail", "User", FormMethod.Post))
+    {
+        <div>
+            <span>Your new Email : </span>
+            <input type="text" name="email" placeholder="Enter Email here" />
+        </div>
+        <div>
+            <span>Your  passowrd : </span>
+            <input type="password" name="password" placeholder="Enter Password here" />
+        </div>
+
+        <div class="aitssendbuttonw3ls" style="margin-left:150px">
+            <input type="submit" value="Ok">
+            <div class="clear"></div>
+        </div>
+    }
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

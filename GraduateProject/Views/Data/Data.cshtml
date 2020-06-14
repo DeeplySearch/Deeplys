@@ -1,0 +1,74 @@
+﻿@model IEnumerable<GraduateProject.Models.DataInfo>
+
+@{
+    ViewBag.Title = "Data";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+           function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="~/js/jquery-2.1.4.min.js"></script>
+<link href="~/finalContent/style.css" rel="stylesheet" media="all" />
+<link href='//fonts.googleapis.com/css?family=Josefin+Sans:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+
+<div class="main">
+
+    <div class="main-info-grid1" style="margin-left:300px">
+        <div class="col-6 text-center">
+            <a class="btn btn-info" href="@Url.Action("Index","Data")"style="width:600px"><i class="fas fa-plus"></i> &nbsp;Add New Data </a>
+
+        </div>
+        <h5>My Data</h5>
+
+        <div class="navigation-bottom-menu-bottom scrollbar" id="style-2">
+
+            @foreach (var item in Model)
+            {
+                <div class="nav-btm-menu-btm-grid john">
+
+                    <div class="nav-btm-menu-btm-grid-left1">
+                        <h3>@item.Name </h3>
+                        @if (@item.Accepted == true)
+                        {
+                            <p>
+                                <a>
+                                    Status:Accepted
+                                    
+                                </a>
+                            </p>
+                            }
+
+                            else
+                            {
+                                <p>
+                                <a>
+                                    Status: Not Accepted
+                                    
+
+
+                                </a>
+                            </p>
+                            }
+                            <p><a>Description:@item.description</a></p>
+                          
+                            <p>URL:<a href="@item.URL" target="_blank">@item.URL</a></p>
+
+                            <button style="margin-left:500px ;margin-top:0px">
+                                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                            </button>
+                            <button style="margin-top:0px">
+
+                                @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                            </button>
+                        </div>
+
+                    <div class="clear"> </div>
+                </div>
+            }
+
+        </div>
+    </div>
+    </div>
+

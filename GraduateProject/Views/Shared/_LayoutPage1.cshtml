@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @*Google Fonts*@
+    @*<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">*@
+    <link href="~/favicon.ico" rel="icon" type="image/x-icon">
+    @*Bootstrap CSS File*@
+
+   <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/styles/style4.css" rel="stylesheet" />
+
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script src="~/Scripts/jquery-1.11.1.min.js"></script>
+    <link href="~/finalContent/Homestyle.css" rel="stylesheet" />
+    @*<link href="~/Content/bootstrap.css" rel="stylesheet" media="all" />*@
+    <link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css' />
+
+</head>
+<body>
+    <header>
+         @*header-area start*@ 
+        @*<div id="sticker" class="header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">*@
+
+                         @*Navigation*@ 
+        <nav class="navbar navbar-default">
+            @*Brand and toggle get grouped for better mobile display*@
+            <div class="navbar-header">
+
+                @*Brand*@
+                <a class="navbar-brand page-scroll sticky-logo" href="@Url.Action("Index","Home")">
+                    <h1><span>D</span>eeply</h1>
+                    @*Uncomment below if you prefer to use an image logo*@
+                    <img src="img/logo.png" alt="" title="">
+                </a>
+            </div>
+            @*Collect the nav links, forms, and other content for toggling*@
+        <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+
+            @*<div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">*@
+            @*<ul class="nav navbar-nav navbar-right">*@
+            <ul class="nav navbar-nav cl-effect-18" id="cl-effect-18">
+                <li ><a href="@Url.Action("Index","Home")" >Home</a></li>
+
+                @*<li class="active">
+            <a class="page-scroll" href="@Url.Action("Index","Home")">Home</a>
+        </li>*@
+                <li>
+                    <a href="@Url.Action("SearchAdvance","SearchDeeply")">Search Advance</a>
+                </li>
+
+                <li>
+                    <a href="@Url.Action("SearchInUserData","SearchDeeply")">Search</a>
+                </li>
+                @if (User.Identity.IsAuthenticated)
+                {
+                }
+                else
+                {
+
+                    <li>
+                        <a href="@Url.Action("Login", "User")">Login </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Sign", "User")">Sign UP </a>
+                    </li>
+                }
+                @if (User.Identity.IsAuthenticated)
+                {
+
+                    <li role="presentation" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello, @User.Identity.Name.Split('@')[0] <span class="caret"></span></a>
+                        <ul class="dropdown-menu" style="background-color:aqua; width:200px">
+                            <li><a href="@Url.Action("UserInfo", "User")">Account INFO</a></li>
+                            <li><a href="@Url.Action("ChangeEmail", "User")">Update Email</a></li>
+                            <li><a href="@Url.Action("UpdatePassword", "User")">Update Password</a></li>
+                            <li><a href="@Url.Action("SearchAdvance", "SearchDeeply")">Advance Search</a></li>
+                            <li><a href="@Url.Action("Index", "Data")">Add Data</a></li>
+
+                            @if (User.Identity.Name != "ghazihaddad3@gmail.com")
+                            {
+                                <li><a href="@Url.Action("Data", "Data")">Update Data</a></li>
+                            }
+
+                            @if (User.Identity.Name == "ghazihaddad3@gmail.com")
+                            {
+                                <li><a href="@Url.Action("DataAdmin", "Data")">Update Data</a></li>
+                                <li><a href="http://osamaalsad.pythonanywhere.com/admin/" target="_blank">Update DataBase</a></li>
+                            }
+                            @using (Html.BeginForm("Logout", "User", FormMethod.Post, new { id = "logoutForm" }))
+                            {
+                                <li><a href="javascript:document.getElementById('logoutForm').submit()" style="margin-left:70px">Logout</a></li>
+                            }
+
+
+                        </ul>
+                    </li>
+                }
+               
+               
+            </ul>
+        </div>
+            @*navbar-collapse*@
+        </nav>
+                         @*END: Navigation*@ 
+                    @*</div>
+                </div>
+            </div>
+        </div>*@
+         @*header-area end*@ 
+    </header>
+     @*header end*@ 
+
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

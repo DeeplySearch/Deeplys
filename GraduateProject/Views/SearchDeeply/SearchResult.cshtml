@@ -1,0 +1,135 @@
+﻿@model IPagedList<GraduateProject.Models.SearchData>
+@using PagedList;
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "SearchResult";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<link href="~/finalContent/Resultstyle.css" rel="stylesheet" />
+<!---- animated-css ---->
+<link href="~/finalContent/animate.css" rel="stylesheet" />
+<script src="~/finalContent/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+<!---- animated-css ---->
+<link href="~/Style/style-test.css" rel="stylesheet" />
+
+@if (Model.Count() == 0)
+{
+    <div class="alert alert-success" style="width:200px;margin-left:500px">
+        <strong>Sorry no such data found</strong>
+
+        <div>
+            Search for another data  @Html.ActionLink("Back to search page", "SearchAdvance")
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+}
+else
+{
+    foreach (var item in Model)
+    {
+        <div class="info-grid wow bounce" data-wow-delay="0.1s" style="margin-left:100px;">
+            <div class="container">
+                <div class="info-grid-main">
+
+                    <div class="col-md-4 info-grids-cr wow bounceIn" data-wow-delay="0.4s" style="width:1000px">
+                        <div class="info-top">
+                            <h3 class="gd-clr">Name: @item.Name</h3>
+                        </div>
+                        <div class="info-bott" style="height:200px">
+
+                            <p>URL:<a href="@item.URL" target="_blank">@item.URL</a></p>
+                            <p> Description: @item.Description </p>
+
+                        </div>
+
+                        <div class="col-md-4 info-grids-cr wow bounceIn" data-wow-delay="0.4s" style="height:10px">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>}
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+@Html.PagedListPager(Model, Page_No => Url.Action("SearchResult",
+  new { Page_No, sort_order = ViewBag.currentSortOrder, Filter_Value = ViewBag.FilterValue }),
+  new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true, DisplayItemSliceAndTotal = true })
+
+
+@*<link href="~/Style/style-test.css" rel="stylesheet" />
+
+    @if (Model.Count() == 0)
+    {
+        <p>Sorry No records Found!</p>
+
+    }
+    else
+    {
+        foreach (var item in Model)
+        {
+
+            <hr>
+            <div class="display-class">
+
+                <div>
+                    <h1>
+                        @Html.DisplayFor(x => item.Name)
+
+                    </h1>
+                    <div>
+                        <P>
+                            @Html.DisplayFor(x => item.URL)
+                        </P>
+                        <P>
+                            @Html.DisplayFor(x => item.Description)
+                        </P>
+                    </div>
+                </div>
+
+            </div>
+
+
+        }
+    }
+    <br />
+
+        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+        @Html.PagedListPager(Model, Page_No => Url.Action("SearchResult",
+          new { Page_No, sort_order = ViewBag.currentSortOrder, Filter_Value = ViewBag.FilterValue }),
+          new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true, DisplayItemSliceAndTotal = true })*@
+
+
